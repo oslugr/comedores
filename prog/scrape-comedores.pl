@@ -3,6 +3,19 @@
 use Web::Scraper;
 use LWP::Simple qw(get);
 use constant URL => 'http://comedoresugr.tcomunica.org';
+my %meses = ( Enero => 1,
+	     Febrero => 2,
+	     Marzo => 3,
+	     Abril => 4,
+	     Mayo => 5,
+	     Junio => 6,
+	     Julio => 7,
+	     Agosto => 8,
+	     Septiembre => 9,
+	     Octubre => 10,
+	     Noviembre => 11,
+	     Diciembre => 12 ) ;
+
 use Data::Dumper;
 use File::Slurp qw(read_file);
 use XML::RSS;
@@ -55,8 +68,28 @@ $rss->channel(
    }
  );
 
-for my $m ( @$res ) {
+for my $m ( @{$res->{'menus'}} ) {
+  my ($foo, $mes, $dia) = split(/\s+/, $m->{'dia'});
+  my $this_date = $dt = DateTime->new(
+				      year       => DateTime->now()->year(),
+				      month      => $meses{$mes},
+				      day        => $dia,
+				      hour       => 13,
+				      minute     => 00,
+				     );
+  my $description;
+  for my $p (@{$m->{'platos'}->[0]->{'plato'}} ) {
+    chop $p;
+    $description .= "$p;"
+  }
+  $rss->add_item(
+		 title       => "Menú del día $dia del $mes",
+		 link        => URL,
+		 description => $description,
+		 dc => { date => $this_date }
+		);
 }
+print $rss->as_string;
 		 
 
 
