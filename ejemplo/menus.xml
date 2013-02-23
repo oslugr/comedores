@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:admin="http://webns.net/mvcb/"
+>
+
+<channel rdf:about="http://comedoresugr.tcomunica.org">
+<title>Men&#xFA;s de los comedores UGR</title>
+<link>http://comedoresugr.tcomunica.org</link>
+<description>Menus</description>
+<dc:language>es-es</dc:language>
+<dc:date>2000-08-23T07:00+00:00</dc:date>
+<dc:publisher>osl@ugr.es</dc:publisher>
+<dc:creator>osl@ugr.es</dc:creator>
+<dc:subject>Men&#xFA;s de los comedores</dc:subject>
+<syn:updateBase>1901-01-01T00:00+00:00</syn:updateBase>
+<syn:updateFrequency>1</syn:updateFrequency>
+<syn:updatePeriod>weekly</syn:updatePeriod>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://comedoresugr.tcomunica.org" />
+  <rdf:li rdf:resource="http://comedoresugr.tcomunica.org" />
+  <rdf:li rdf:resource="http://comedoresugr.tcomunica.org" />
+  <rdf:li rdf:resource="http://comedoresugr.tcomunica.org" />
+  <rdf:li rdf:resource="http://comedoresugr.tcomunica.org" />
+  <rdf:li rdf:resource="http://comedoresugr.tcomunica.org" />
+ </rdf:Seq>
+</items>
+</channel>
+<item rdf:about="http://comedoresugr.tcomunica.org">
+<title>Men&#xFA; del d&#xED;a 18 del Febrero</title>
+<link>http://comedoresugr.tcomunica.org</link>
+<description> Espaguetis con Crema de Ma&#xED;z Dulce y Mozzarella  Chuleta de Cerdo a la Parrilla con Ensalada de Pimientos  Pan, Bebida y Postre; Espaguetis con Crema de Ma&#xED;z Dulce y Mozzarella; Chuleta de Cerdo a la Parrilla con Ensalada de Pimientos; Pan, Bebida y Postre;</description>
+<dc:date>2013-02-18T13:00:00</dc:date>
+</item>
+<item rdf:about="http://comedoresugr.tcomunica.org">
+<title>Men&#xFA; del d&#xED;a 19 del Febrero</title>
+<link>http://comedoresugr.tcomunica.org</link>
+<description> Estofado de Lentejas  Pollo Salteado Archiduque con Patatas Diente de Ajo  Pan, Bebida y Postre; Estofado de Lentejas; Pollo Salteado Archiduque con Patatas Diente de Ajo; Pan, Bebida y Postre;</description>
+<dc:date>2013-02-19T13:00:00</dc:date>
+</item>
+<item rdf:about="http://comedoresugr.tcomunica.org">
+<title>Men&#xFA; del d&#xED;a 20 del Febrero</title>
+<link>http://comedoresugr.tcomunica.org</link>
+<description> Ensalada de Ave o Huevos con Bacalao Dourado  Escalope de Ternera con Coliflor Polonesa  Pan, Bebida y Postre; Ensalada de Ave o Huevos con Bacalao Dourado; Escalope de Ternera con Coliflor Polonesa; Pan, Bebida y Postre;</description>
+<dc:date>2013-02-20T13:00:00</dc:date>
+</item>
+<item rdf:about="http://comedoresugr.tcomunica.org">
+<title>Men&#xFA; del d&#xED;a 21 del Febrero</title>
+<link>http://comedoresugr.tcomunica.org</link>
+<description> Lasa&#xF1;a  Merluza a la Andaluza con Ensalada Rebeca  Pan, Bebida y Postre; Lasa&#xF1;a; Merluza a la Andaluza con Ensalada Rebeca; Pan, Bebida y Postre;</description>
+<dc:date>2013-02-21T13:00:00</dc:date>
+</item>
+<item rdf:about="http://comedoresugr.tcomunica.org">
+<title>Men&#xFA; del d&#xED;a 22 del Febrero</title>
+<link>http://comedoresugr.tcomunica.org</link>
+<description> Salmorejo o Arroz a Banda  Huevo Frito, Empanadilla y Patatas  Pan, Bebida y Postre; Salmorejo o Arroz a Banda; Huevo Frito, Empanadilla y Patatas; Pan, Bebida y Postre;</description>
+<dc:date>2013-02-22T13:00:00</dc:date>
+</item>
+<item rdf:about="http://comedoresugr.tcomunica.org">
+<title>Men&#xFA; del d&#xED;a 23 del Febrero</title>
+<link>http://comedoresugr.tcomunica.org</link>
+<description> Crema de Ave Reina  Pechuga de Pollo Villeroy con Patatas a la Brava  Pan, Bebida y Postre; Crema de Ave Reina; Pechuga de Pollo Villeroy con Patatas a la Brava; Pan, Bebida y Postre;</description>
+<dc:date>2013-02-23T13:00:00</dc:date>
+</item>
+</rdf:RDF>

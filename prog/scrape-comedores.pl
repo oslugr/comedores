@@ -16,7 +16,6 @@ my %meses = ( Enero => 1,
 	     Noviembre => 11,
 	     Diciembre => 12 ) ;
 
-use Data::Dumper;
 use File::Slurp qw(read_file);
 use XML::RSS;
 
@@ -44,19 +43,20 @@ if ( !$file_name ) {
   $contenido = read_file( $file_name ) || die "No se puede leer $file_name\n";
 }
 
-$contenido =~ s/<br>/ o /g; #hack para d√≠as donde hay platos que elegir
+$contenido =~ s/<br>/ o /g; #hack para dÌas donde hay platos que elegir
 
 $res = $menus->scrape( $contenido );
 
 my $rss = new XML::RSS (version => '1.0');
 
 $rss->channel(
-   title        => "Men√∫s de los comedores UGR",
+   title        => "Men˙s de los comedores UGR",
    link         => URL,
    description  => "Menus",
+	      encoding => 'iso-8859-1',
    dc => {
      date       => '2000-08-23T07:00+00:00',
-     subject    => "Men√∫s de los comedores",
+     subject    => "Men˙s de los comedores",
      creator    => 'osl@ugr.es',
      publisher  => 'osl@ugr.es',
      language   => 'es-es',
@@ -83,7 +83,7 @@ for my $m ( @{$res->{'menus'}} ) {
     $description .= "$p;"
   }
   $rss->add_item(
-		 title       => "Men√∫ del d√≠a $dia del $mes",
+		 title       => "Men˙ del dÌa $dia del $mes",
 		 link        => URL,
 		 description => $description,
 		 dc => { date => $this_date }
