@@ -50,23 +50,23 @@ $res = $menus->scrape( $contenido );
 my $rss = new XML::RSS (version => '1.0');
 
 $rss->channel(
-   title        => "Menús de los comedores UGR",
-   link         => URL,
-   description  => "Menus",
+	      title        => "Menús de los comedores UGR",
+	      link         => URL,
+	      description  => "Menus",
 	      encoding => 'iso-8859-1',
-   dc => {
-     date       => '2000-08-23T07:00+00:00',
-     subject    => "Menús de los comedores",
-     creator    => 'osl@ugr.es',
-     publisher  => 'osl@ugr.es',
-     language   => 'es-es',
-   },
-   syn => {
-     updatePeriod     => "weekly",
-     updateFrequency  => "1",
-     updateBase       => "1901-01-01T00:00+00:00",
-   }
- );
+	      dc => {
+		     date       => '2000-08-23T07:00+00:00',
+		     subject    => "Menús de los comedores",
+		     creator    => 'osl@ugr.es',
+		     publisher  => 'osl@ugr.es',
+		     language   => 'es-es',
+		    },
+	      syn => {
+		      updatePeriod     => "weekly",
+		      updateFrequency  => "1",
+		      updateBase       => "1901-01-01T00:00+00:00",
+		     }
+	     );
 
 for my $m ( @{$res->{'menus'}} ) {
   my ($foo, $mes, $dia) = split(/\s+/, $m->{'dia'});
@@ -83,7 +83,7 @@ for my $m ( @{$res->{'menus'}} ) {
     $description .= "$p;"
   }
   $rss->add_item(
-		 title       => "Menú del día $dia del $mes",
+		 title       => "Menú del día $dia del mes $mes",
 		 link        => URL,
 		 description => $description,
 		 dc => { date => $this_date }
