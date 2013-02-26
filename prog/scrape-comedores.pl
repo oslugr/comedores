@@ -78,12 +78,13 @@ for my $m ( @{$res->{'menus'}} ) {
 				      minute     => 00,
 				     );
   my $description;
-  for my $p (@{$m->{'platos'}->[0]->{'plato'}} ) {
+  my @platos = @{$m->{'platos'}->[0]->{'plato'}};
+  for my $p (@platos[1..$#platos] ) {
     chop $p;
     $description .= "$p;"
   }
   $rss->add_item(
-		 title       => "Menú del día $dia del mes $mes",
+		 title       => "Menú del día $dia de $mes",
 		 link        => URL,
 		 description => $description,
 		 dc => { date => $this_date }
